@@ -1,0 +1,302 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* Colors */
+:root {
+  --blue: #007AC2;
+  --blue-light: #7ddaff;
+  --blue-dark: #005191;
+  --blue-darker: #040306;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+ul[class],
+ol[class] {
+  padding: 0;
+}
+html{
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+ul[class],
+ol[class] {
+  list-style: none;
+}
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  text-decoration: none;
+}
+a:not([class]):hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+section > * + * {
+  margin-top: 1em;
+}
+.btn {
+  font: inherit;
+}
+/* STYLES
+---------------------------------- */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  width: 100%;
+  overflow-x: hidden;
+}
+h1, h2, h3 {
+  font-family: "Roboto", sans-serif;
+}
+h2 {
+  color: var(--blue);
+  font-size: clamp(1.5rem, 5vw, 2.8rem);
+  line-height: 1.5;
+}
+p {
+  color: #333;
+  font-size: clamp(1rem, 3vw, 20px);
+  font-weight: 300;
+  margin-bottom: 8px;
+  line-height: 1.75;
+}
+section {
+  margin-bottom: 2rem;
+  padding: 0 1.5rem;
+}
+a:not([class])  {
+  color: var(--blue-light);
+}
+.btn {
+  display: inline-block;
+  background: #eee;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+}
+figure {
+  width: 100%;
+  text-align: center;
+  margin: 2rem 0;
+}
+figure img {
+  margin: 0 auto;
+  width: clamp(320px, 100%, 1400px);
+}
+
+/* Header */
+.header {
+  display: flex;
+  padding: 20px;
+  background: linear-gradient(180deg, black, transparent);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  padding: 1rem 1rem;
+  width: 95%;
+  margin: 0 auto;
+}
+.smi-logo {
+  width: 280px;
+}
+@media (max-width: 640px) {
+  .smi-logo {
+    width: 200px;
+  }
+}
+.smi-logo img {
+  width: 100%;
+}
+
+.hamburger {
+  font-size: 30px;
+  text-decoration: none;
+  color: white;
+}
+
+/* Hero Image */
+.hero {
+  background-image: url('../images/hero-image.jpg');
+  background-size: cover;
+  background-position: center left;
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 3vw 5vw;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh;
+  }
+}
+.hero::after {
+  content: '';
+  background: linear-gradient(to bottom, transparent, var(--blue-dark));
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40vh;
+  z-index: 0;
+}
+
+.hero h1 {
+  font-size: clamp(2.25rem, 5vw, 4rem);
+  color: white;
+  line-height: 1.25;
+  z-index: 1;
+}
+
+.inner {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* Four-column-grid cards */
+.four-column-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+@media (max-width: 960px) {
+  .four-column-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+
+/* Card */
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: relative;
+  transition: transform .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  padding-bottom: 4rem;
+}
+.card:hover {
+  transform: scale(1.05) !important;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card .card__product-info {
+  background: linear-gradient(to bottom, transparent, var(--blue-dark) 50%);
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0 .5rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.card .card__product-type {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  line-height: 1.1;
+  padding: 4rem 0 .5rem .5rem;
+  font-size: clamp(1.3rem, 3vw, 2rem);
+}
+.card .card__product-type span {
+  font-weight: 300;
+  display: block;
+}
+.card .card__product-img {
+  height: 100px;
+  max-width: 120px;
+  object-fit: contain;
+}
+
+/* CTA heading */
+.catch-heading h3 {
+  color: var(--blue-light);
+  font-size: clamp(3rem, 5vw, 5rem);
+  text-align: center;
+  line-height: 1.1;
+  padding: 2rem 0;
+}
+
+/* Footer */
+footer {
+  background: #b0d9e7;
+  border-top: 1px solid var(--blue-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2rem 2%;
+}
+.address {
+  color: #333;
+  font-size: 0.95rem;
+}
+/* .social-links {
+
+} */
+.social-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.social-links ul li {
+  float: left;
+}
+.social-links ul li a {
+  display: block;
+  margin: 8px;
+  width: 24px;
+  height: 24px;
+  opacity: .7;
+  transition: .3s;
+}
+.social-links ul li a:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+.social-links ul li a svg{
+  width: 100%;
+  height: 100%;
+}
