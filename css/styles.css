@@ -261,22 +261,14 @@ figure img {
 /* Layouts */
 .d-grid {
   display: grid;
-  grid-template-columns: 1fr 60%;
+  grid-template-columns: 1fr 50%;
   gap: 2vw;
 }
 .d-grid.reverse {
-  grid-template-columns: 60% 1fr;
+  grid-template-columns: 50% 1fr;
 }
 .d-grid.reverse div:last-child {
   order: -1;
-}
-@media (max-width: 1200px) {
-  .d-grid {
-    grid-template-columns: 1fr 50%;
-  }
-  .d-grid.reverse {
-    grid-template-columns: 50% 1fr;
-  }
 }
 @media (max-width: 990px) {
   .d-grid {
@@ -309,7 +301,7 @@ figure img {
   }
 }
 .card__product-brand {
-  background: linear-gradient(to bottom, transparent, var(--blue-dark) 90%);
+  background: linear-gradient(to bottom, transparent, var(--blue-light) 70%);
   color: #ffff;
   display: flex;
   justify-content: space-between;
@@ -322,6 +314,10 @@ figure img {
   left: 0;
   right: 0;
   padding: 2rem 1rem 1rem;
+}
+.card__product-brand img {
+  width: 100%;
+  max-width: 125px;
 }
 .product-scene-grid .card {
   padding-bottom: 0;
