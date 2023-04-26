@@ -259,6 +259,9 @@ figure img {
 }
 
 /* Layouts */
+.d-flex {
+  display: flex;
+}
 .d-grid {
   display: grid;
   grid-template-columns: 1fr 50%;
@@ -274,6 +277,25 @@ figure img {
   .d-grid {
     display: block;
   }
+}
+.high-performance {
+  display: grid;
+  grid-template-columns: 160px auto;
+  gap: 1rem;
+}
+@media (max-width: 640px) {
+  .high-performance {
+    display: block;
+  }
+}
+.icon-high-performance {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+.icon-high-performance img {
+  max-width: 160px;
+  width: 100%;
 }
 
 /* CTA heading */
