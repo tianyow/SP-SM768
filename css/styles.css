@@ -327,7 +327,7 @@ figure img {
   }
 }
 .card__product-brand {
-  background: linear-gradient(to bottom, transparent, var(--blue-light) 70%);
+  background: linear-gradient(to top, transparent, var(--blue-light) 50%);
   color: #ffff;
   display: flex;
   justify-content: space-between;
@@ -336,10 +336,10 @@ figure img {
   font-weight: bold;
   font-size: clamp(1.5rem, 2vw, 1.75rem);
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   right: 0;
-  padding: 2rem 1rem 1rem;
+  padding: 1rem 1rem 3rem;
 }
 .card__product-brand img {
   width: 100%;
@@ -366,12 +366,23 @@ figure img {
   transform: translateY(0);
 }
 .card__product-list-link {
-  background: var(--blue);
-  box-shadow: 3px 3px 0 rgba(20, 94, 151, 0.35);
+  background: rgb(127 0 89 / 90%);
   color: #fff;
   font-size: 1.1rem;
-  padding: 3px .5rem;
+  font-weight: bold;
+  padding: 0.75rem 1rem;
   text-decoration: none;
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 200px;
+  right: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px 0 0 0;
+  gap: 10px;
 }
 .card__product-list ul {
   list-style: none;
